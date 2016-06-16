@@ -2,28 +2,26 @@
     <body>
         <div id="container">
             <style scoped>
-                #container {
-                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                }
                 #regular-res {
                     padding-right: 8px;
                 }
                 #high-res {
                     display: none;
                 }
+                #yoi-logo, #signature {
+                    float: left;
+                }
                 #signature {
                     color: #000;
                     font-family: Helvetica, Arial, sans-serif;
                     font-size: 16px;
+                    margin-top: 1px;
                 }
                 #signature p {
                     margin: 6px 0;
                 }
                 #signature a {
                     color: #4e99c0;
-                    flex: 0 0 auto;
                 }
 
                 @media
@@ -36,9 +34,12 @@
                         display: inline;
                         padding-right: 16px;
                     }
+                    #signature {
+                        margin-top: 41px;
+                    }
                 }
             </style>
-            <a href="http://yoicorp.com/">
+            <a href="http://yoicorp.com/" id="yoi-logo">
                 <img id="regular-res"
                  src="https://ferrazzi.atlassian.net/secure/thumbnail/20410/_thumb_20410.png" />
                 <img id="high-res"
