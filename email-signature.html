@@ -1,15 +1,17 @@
 <html>
     <body>
-        <div>
+        <div id="container">
             <style scoped>
+                #container {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                }
                 #regular-res {
                     padding-right: 8px;
                 }
                 #high-res {
                     display: none;
-                }
-                #regular-res, #high-res {
-                    float: left;
                 }
                 #signature {
                     color: #000;
@@ -21,9 +23,12 @@
                 }
                 #signature a {
                     color: #4e99c0;
+                    flex: 0 0 auto;
                 }
 
-                @media (max-width: 480px) { /*replace with min-resolution*/
+                @media
+                (-webkit-min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi) {
                     #regular-res {
                         display: none;
                     }
@@ -39,16 +44,16 @@
                 <img id="high-res"
                      src="https://ferrazzi.atlassian.net/secure/thumbnail/20411/_thumb_20411.png" />
             </a>
-            <div style="float: left" id="signature">
+            <div id="signature">
                 <p class="signature">
                     <strong>Gus Oenning</strong>
                     <span> / Visual Designer</span>
                 </p>
-                <p class="signature">
+                <p>
                     <a href="mailto:goenning@yoicorp.com" class="signature">goenning@yoicorp.com</a> /
                     <a href="tel:+14242889010" class="signature">(424) 288-9010</a>
                 </p>
-                <p class="signature">
+                <p>
                     <a href="http://yoicorp.com/" class="signature">yoicorp.com</a>
                     <span> 1849 Sawtelle Blvd, Los Angeles, CA 90025</span>
                 </p>
