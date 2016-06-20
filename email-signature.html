@@ -1,64 +1,57 @@
 <html>
-    <body>
-        <div id="container">
-            <style scoped>
-                #regular-res {
-                    padding-right: 8px;
-                }
-                #high-res {
-                    display: none;
-                }
-                #yoi-logo, #signature {
-                    float: left;
-                }
-                #signature {
-                    color: #000;
-                    font-family: Helvetica, Arial, sans-serif;
-                    font-size: 16px;
-                    margin-top: 1px;
-                }
-                #signature p {
-                    margin: 6px 0;
-                }
-                #signature a {
-                    color: #4e99c0;
-                }
+<body>
+<div id="container">
+    <style scoped>
+        @media (max-width: 480px) {
+            /*The line above is for testing only.
+            Comment it out, and uncomment the lines below. */
+            /*(-webkit-min-device-pixel-ratio: 2),*/
+            /*(min-resolution: 192dpi) {*/
+            #yoi-logo {
+                display: inline-block;
+                height: 80px;
+                width: 80px;
+                background-image: url(https://ferrazzi.atlassian.net/secure/thumbnail/20411/_thumb_20411.png);
+                background-size: 80px 80px;
+            }
 
-                @media
-                (-webkit-min-device-pixel-ratio: 2),
-                (min-resolution: 192dpi) {
-                    #regular-res {
-                        display: none;
-                    }
-                    #high-res {
-                        display: inline;
-                        padding-right: 16px;
-                    }
-                    #signature {
-                        margin-top: 41px;
-                    }
-                }
-            </style>
-            <a href="http://yoicorp.com/" id="yoi-logo">
-                <img id="regular-res"
-                 src="https://ferrazzi.atlassian.net/secure/thumbnail/20410/_thumb_20410.png" />
-                <img id="high-res"
-                     src="https://ferrazzi.atlassian.net/secure/thumbnail/20411/_thumb_20411.png" />
-            </a>
-            <div id="signature">
-                <p>
-                    <strong>Gus Oenning</strong>
-                    <span> / Visual Designer</span>
-                </p>
-                <p>
-                    <a href="mailto:goenning@yoicorp.com" class="signature">goenning@yoicorp.com</a> /
-                    <a href="tel:+14242889010" class="signature">(424) 288-9010</a>
-                </p>
-                <p>
-                    <a href="http://yoicorp.com/" class="signature">yoicorp.com</a>
-                    <span> 1849 Sawtelle Blvd, Los Angeles, CA 90025</span>
-                </p>
-            </div>
-        </div>
-    </body>
+            #regular-res {
+                display: none;
+            }
+        }
+    </style>
+    <table style="color: #000; font-family: Helvetica, Arial, sans-serif; font-size: 16px">
+        <tr>
+            <td rowspan="3"
+                style="vertical-align: middle; padding-right: 8px">
+                <a href="http://yoicorp.com/"
+                   id="yoi-logo">
+                    <img id="regular-res"
+                         src="https://ferrazzi.atlassian.net/secure/thumbnail/20410/_thumb_20410.png"
+                         style="height: 80px; width: 80px"/>
+                </a>
+            </td>
+            <td>
+                <strong>Gus Oenning</strong>
+                <span> / Visual Designer</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="mailto:goenning@yoicorp.com"
+                   style="color: #4e99c0">goenning@yoicorp.com</a> /
+                <a href="tel:+14242889010"
+                   style="color: #4e99c0">(424) 288-9010</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="http://yoicorp.com/"
+                   style="color: #4e99c0">yoicorp.com</a>
+                <span> 1849 Sawtelle Blvd, Los Angeles, CA 90025</span>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
 </html>
